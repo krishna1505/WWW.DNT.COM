@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All About DNT</title>
+    <link rel="stylesheet" href="abt.css">
+</head>
+<body>
+  <h1 class="change-color "> DONATE</h1>
+    
+    <br>
+    <br>
+    <br>
+    <input type="checkbox" id="dark-light-mode-switch"> Change  mode</input> 
+    <br>
+    <br>
+    <br>
+    <p> 
+   1) In this website donate you will easily find blood , plasma , and other all human organce.. 
+    <BR>
+      2)  You can also search for your city or country to know about the nearest blood bank where you can donate your blood ..
+       <br>
+      3)  You can also search for your locality to know the nearest blood bank or hospital where you can donate your blood ..
+        <br>
+      4)  You can also search for the nearest hospital where they are looking for your type of organ ..
+        <br>
+       5) And if you want to give a donation then just click on the "donate now" ...
+    <br>
+    </p>
+
+    <br>
+    <br>
+   
+</body>
+<footer class="sticky-footer">
+    <p>&copy; 2023 DONATE . All rights reserved.</p>
+</footer>
+<script>
+  function initDarkLightModeSwitch() {
+//check if user preference is already set
+if (localStorage.getItem('dark-light-mode') === 'dark') {
+document.body.classList.add('dark-mode');
+document.getElementById('dark-light-mode-switch').checked = true;
+} else {
+document.body.classList.remove('dark-mode');
+document.getElementById('dark-light-mode-switch').checked = false;
+}
+}
+
+function toggleDarkLightMode(isDarkMode) {
+if (isDarkMode) {
+document.body.classList.add('dark-mode');
+localStorage.setItem('dark-light-mode', 'dark');
+} else {
+document.body.classList.remove('dark-mode');
+localStorage.setItem('dark-light-mode', 'light');
+}
+}
+
+//function to call on checkbox change
+function darkLightModeChanged() {
+const isDarkMode = document.getElementById('dark-light-mode-switch').checked;
+toggleDarkLightMode(isDarkMode);
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+initDarkLightModeSwitch();
+
+// add event listener for switch button
+document.getElementById('dark-light-mode-switch').addEventListener('change', darkLightModeChanged);
+});
+</script>
+
+</html>

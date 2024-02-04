@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="cnt.css">
+</head>
+<body>
+    <h1 class="change-color "> CONTACT US</h1>
+    <br>
+    <br>
+    <input type="checkbox" id="dark-light-mode-switch"> Change  mode</input> 
+    <br>
+    <form action="/contactus/submit" method="post"></form>
+    <div class="paragraph">
+      <p>If you have any questions or inquiries, feel free to contact us using the information below:</p>
+      <br>
+      <br>
+      <p>Email: KY2288922@gmail.com</p>
+      <br>
+      <p>Phone Number1: 6393655863</p>
+      <br>
+      <p>Phone Number2: 7054215638 </p>
+      <br>
+      <p>instagram__krishna.2004</p>
+      <br>
+      <p>Linkedin: krishna yadav</p>
+      <br>
+      <p>Git hub: = krishna yadav</p>
+      </div>
+</body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<footer class="sticky-footer">
+    <p>&copy; 2023 DONATE . All rights reserved.</p>
+</footer>
+<script>
+    function initDarkLightModeSwitch() {
+  //check if user preference is already set
+  if (localStorage.getItem('dark-light-mode') === 'dark') {
+  document.body.classList.add('dark-mode');
+  document.getElementById('dark-light-mode-switch').checked = true;
+  } else {
+  document.body.classList.remove('dark-mode');
+  document.getElementById('dark-light-mode-switch').checked = false;
+  }
+  }
+  
+  function toggleDarkLightMode(isDarkMode) {
+  if (isDarkMode) {
+  document.body.classList.add('dark-mode');
+  localStorage.setItem('dark-light-mode', 'dark');
+  } else {
+  document.body.classList.remove('dark-mode');
+  localStorage.setItem('dark-light-mode', 'light');
+  }
+  }
+  
+  //function to call on checkbox change
+  function darkLightModeChanged() {
+  const isDarkMode = document.getElementById('dark-light-mode-switch').checked;
+  toggleDarkLightMode(isDarkMode);
+  }
+  
+  document.addEventListener('DOMContentLoaded', function () {
+  initDarkLightModeSwitch();
+  
+  // add event listener for switch button
+  document.getElementById('dark-light-mode-switch').addEventListener('change', darkLightModeChanged);
+  });
+  </script>
+  
+  
+</html>

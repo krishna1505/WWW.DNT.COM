@@ -1,0 +1,54 @@
+@keyframes change-color {
+  0% { color: crimson; }
+  33% { color: palevioletred; }
+  56% { color: brown; }
+  66% { color: purple; }
+  76% { color: mediumorchid; }
+  100% { color:darkblue; }
+}
+
+.change-color {
+  animation: change-color 3s linear infinite;
+  text-decoration: none;
+  text-align: center;
+}
+body {
+  transition: background-color 0.5s;
+}
+.dark-mode {
+  background-color: #222;
+  color: #d3d3d3;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  /* background-color: #333; */
+  /* color: white; */
+  text-align: center;
+  padding: 1rem;
+}
+
+main {
+  padding: 2rem;
+}
+
+.category {
+  margin-bottom: 2rem;
+}
+
+.faq {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.faq h3 {
+  margin-top: 0;
+}

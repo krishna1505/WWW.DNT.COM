@@ -1,0 +1,133 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Payment</title>
+    <link rel="stylesheet" href="pay.css">
+</head>
+<body>
+    <h1>Choose Your Payment Method</h1>
+    <div class="payment-options">
+        <div class="payment-option">
+            <img src="images/credit-card.png" alt="Credit Card">
+            <h2>Credit Card</h2>
+            <button>Pay</button>
+        </div>
+        <div class="payment-option">
+            <img src="images/paypal.png" alt="PayPal">
+            <h2>PayPal</h2>
+            <button>Pay</button>
+        </div>
+        <div class="payment-option">
+            <img src="images/net-banking.png" alt="Net Banking">
+            <h2>Net Banking</h2>
+            <button>Pay</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Add Payment Method</title>
+<style>
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #555;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+        -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+        -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+        transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    }
+
+    .radio-inline {
+        position: relative;
+        display: inline-block;
+        padding-left: 20px;
+        margin-bottom: 0;
+        font-weight: 400;
+        cursor: pointer;
+    }
+
+    .radio input[type="radio"] {
+        position: absolute;
+        margin-top: 0;
+        margin-left: -20px;
+    }
+
+    .radio-inline + .radio-inline {
+        margin-left: 0;
+        margin-top: -3px;
+    }
+
+    .btn-primary {
+        color: #fff;
+        background-color: #337ab7;
+        border-color: #2e6da4;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 6px 12px;
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.42857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 4px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Add Payment Method</h2>
+    <form id="addPaymentForm">
+        <div class="form-group">
+            <label for="paymentMethod">Payment Method:</label>
+            <div class="radio">
+                <label><input type="radio" name="paymentMethod" value="netBanking" checked>Net Banking</label>
+            </div>
+            <div class="radio">
+                <label><input type="radio" name="paymentMethod" value="debitCard">Debit Card</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="amount">Amount:</label>
+            <input type="text" class="form-control" id="amount" name="amount" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById('addPaymentForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var formData = new FormData(event.target);
+        var paymentMethod = formData.get('paymentMethod');
+        var amount = formData.get('amount');
+
+        if (paymentMethod === 'netBanking') {
+            alert('Net Banking Transaction for Amount: ' + amount);
+        } else if (paymentMethod

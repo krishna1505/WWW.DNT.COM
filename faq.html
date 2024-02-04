@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <br>
+    <br>
+    <h1 class="change-color "> DONATE</h1>
+    <br>
+    <link rel="stylesheet" href="faq.css">
+    <input type="checkbox" id="dark-light-mode-switch"> Change  mode</input> 
+    
+  
+   
+</head>
+<body>
+    <div class="faq">
+        <div class="faq-title">FAQ</div>
+        <div class="faq-item">
+          <br>
+          <br>
+          <br>
+
+            <div class="faq-question" onclick="toggleAnswer(this)"> 1.What is blood and plasma donation?</div>
+            <div class="faq-answer">Ans.Blood and plasma donation is the process of voluntarily donating blood, plasma, or both to help people in need. The donated blood and plasma are separated into components like red blood cells, plasma proteins, and platelets. These components are then tested, stored, and used in medical procedures like blood transfusions and organ transplants.</div>
+        </div>
+        <br>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)"> 2.Who can donate blood and plasma?</div>
+            <div class="faq-answer">Ans.Anyone who is at least 18 years old, weighs at least 110 lbs (50 kg), and is in generally good health can donate blood. As for plasma donation, you must weigh at least 125 lbs (57 kg) and be at least 19 years old.</div>
+        </div>
+        <br>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">3.Where can I find blood and plasma donation centers?</div>
+            <div class="faq-answer">Ans.You can find blood and plasma donation centers near you by visiting the website of the American Red Cross (https://www.redcrossblood.org/) or by using an online blood donation center locator (e.g., Blood Center Finder).</div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    
+    <footer class="sticky-footer">
+      <p>&copy; 2023 DONATE . All rights reserved.</p>
+  </footer>
+
+  <script>
+      function initDarkLightModeSwitch() {
+//check if user preference is already set
+if (localStorage.getItem('dark-light-mode') === 'dark') {
+document.body.classList.add('dark-mode');
+document.getElementById('dark-light-mode-switch').checked = true;
+} else {
+document.body.classList.remove('dark-mode');
+document.getElementById('dark-light-mode-switch').checked = false;
+}
+}
+
+function toggleDarkLightMode(isDarkMode) {
+if (isDarkMode) {
+document.body.classList.add('dark-mode');
+localStorage.setItem('dark-light-mode', 'dark');
+} else {
+document.body.classList.remove('dark-mode');
+localStorage.setItem('dark-light-mode', 'light');
+}
+}
+
+//function to call on checkbox change
+function darkLightModeChanged() {
+const isDarkMode = document.getElementById('dark-light-mode-switch').checked;
+toggleDarkLightMode(isDarkMode);
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+initDarkLightModeSwitch();
+
+// add event listener for switch button
+document.getElementById('dark-light-mode-switch').addEventListener('change', darkLightModeChanged);
+});
+    function toggleAnswer(item) {
+        let answer = item.nextElementSibling;
+        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+    }
+</script>
+</body>
+</html>

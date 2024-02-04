@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* background-color:#D3D3D3;  */
+}
+@keyframes change-color {
+    0% { color: crimson; }
+    33% { color: palevioletred; }
+    56% { color: brown; }
+    66% { color: purple; }
+    76% { color: mediumorchid; }
+    100% { color:darkblue; }
+  }
+  
+  .change-color {
+    animation: change-color 2s linear infinite;
+    text-decoration: none;
+    text-align: center;
+  }
+/* h1{
+    
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-transform: capitalize;
+    text-shadow: #D3D3D3;
+    text-decoration: underline;
+    color: crimson;
+} */
+.dark-mode {
+    background-color: #222;
+    color: #d3d3d3;
+  }
+.mode{
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-style:italic ;
+}
+p{
+    text-align: center;
+    display: inline;
+    font-size: 30px;
+    font-size: 1.3em;
+    line-height: 1.6;
+    letter-spacing: .04em;
+    font-weight: bold;
+    font-style: italic;
+    font-variant: small-caps;
+    font-stretch: condensed;
+    
+    font-feature-settings: "ss01" on;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+
+    /* color: black; */
+}
+
+.sticky-footer {
+    position: absolute;
+    bottom: 10;
+    width: 100%;
+    /* background-color: #f1f1f1; */
+    padding: 20px;
+    text-align: center;
+}

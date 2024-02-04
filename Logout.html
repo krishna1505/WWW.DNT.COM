@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout Section</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .logout-section {
+            background-color: #555;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .logout-section h2 {
+            margin-bottom: 20px;
+        }
+        .logout-section button {
+            background-color: green;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .logout-section button:hover {
+            background-color: #d3d3d310;
+        }
+        a{
+            text-decoration: none;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="logout-section">
+        <h2>Logout</h2>
+        <button id="logout-btn"><a href="index.html" >Logout</a></button>
+    </div>
+    <script>
+        document.getElementById('logout-btn').addEventListener('click', function() {
+            alert('You have been logged out successfully.');
+            // You can replace this line with the actual logout process, like sending a request to the server
+        });
+    </script>
+</body>
+</html>
